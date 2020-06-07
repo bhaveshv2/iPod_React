@@ -16,8 +16,8 @@ function App() {
 
 const styles = {
   main:{
-    background:'rgb(216, 216, 207)',
-    width:300,
+    background:'grey',
+    width:250,
     height:500,
     padding:10,
     borderRadius:10,
