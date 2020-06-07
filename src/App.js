@@ -1,26 +1,31 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Screen from './Screen';
+import Controls from './Controls';
+// import './App.css';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className="App">
+            <div className="main" style={styles.main}>
+                <Screen />
+                <Controls />
+            </div>
+        </div>
+    );
+}
+
+const styles = {
+  main:{
+    background:'rgb(216, 216, 207)',
+    width:300,
+    height:500,
+    padding:10,
+    borderRadius:10,
+    position:'relative',
+    top:200,
+    left:500,
+    WebkitBoxReflect: 'below 1px -webkit-gradient(linear, right top, right bottom, from(transparent), color-stop(40%,transparent), to(rgba(255, 255, 255, 0.5))'
+  }
 }
 
 export default App;
