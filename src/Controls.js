@@ -2,19 +2,18 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 
-class Controls extends React.Component{
-    render(){
+const Controls=(props)=>{
         return(
-            <div className="controls" style={styles.controls}>
+            <div id="controls" style={styles.controls} onMouseOver={props.rotate} draggable='false'>
                 <div className="outer-circle" style={styles.outerCircle}>
                     <div className="top-container" style={styles.topContainer}>
-                        <h4 style={{color:'grey',textAlign:'center'}}>MENU</h4>
+                        <h4 style={{color:'grey',textAlign:'center'}} id="menu" onClick={props.menu}>MENU</h4>
                     </div>
                     <div className="middle-container" style={styles.middleContainer}>
                         <div className="previous" style={styles.previous}>
                             <FontAwesomeIcon icon={['fas','backward']}/>
                         </div>
-                        <div className="inner-circle" style={styles.innerCircle}></div>
+                        <div className="inner-circle" style={styles.innerCircle} onClick={props.otherScreen}></div>
                         <div className="next" style={styles.next}>
                             <FontAwesomeIcon icon={['fas','forward']}/>
                         </div>
@@ -26,7 +25,6 @@ class Controls extends React.Component{
                 </div>
             </div>
         )
-    }
 }
 
 const styles = {
